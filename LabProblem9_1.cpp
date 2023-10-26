@@ -13,7 +13,7 @@ using namespace std;
 void outputEven(int array[], int size);
 void ouputEvenIndices(int array[], int size);
 void reverseOrder(int array[], int size);
-
+void firstLast(int array[], int size);
 
 
 int main(void) {
@@ -32,8 +32,21 @@ int main(void) {
 	ouputEvenIndices(numbers, NUMBER_OF_INTEGERS);
 	outputEven(numbers, NUMBER_OF_INTEGERS);
 	reverseOrder(numbers, NUMBER_OF_INTEGERS);
-
+	firstLast(numbers, NUMBER_OF_INTEGERS);
 	return 0;
+}
+
+void firstLast(int array[], int size) {
+	cout << "\nFirst and Last:\t\t";
+
+	for (int i = 0; i < size; i++) {
+		if (i == 0) {
+			cout << array[i] << '\t';
+		}
+		else if (i == size - 1) {
+			cout << array[i] << '\t';
+		}
+	}
 }
 
 void reverseOrder(int array[], int size) {
