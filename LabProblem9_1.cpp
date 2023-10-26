@@ -24,6 +24,7 @@ int main(void) {
 
 	srand((unsigned)time(0)); // seed RNG
 
+
 	cout << "The random integers:\t";
 	for (int i = 0; i < NUMBER_OF_INTEGERS; i++) {
 		numbers[i] = rand() % (HIGHEST_VALUE - LOWEST_VALUE + 1) + LOWEST_VALUE; // get random 4 digit number
