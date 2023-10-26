@@ -12,6 +12,8 @@ using namespace std;
 
 void outputEven(int array[], int size);
 void ouputEvenIndices(int array[], int size);
+void reverseOrder(int array[], int size);
+
 
 
 int main(void) {
@@ -28,13 +30,23 @@ int main(void) {
 		cout << numbers[i] << '\t';
 	}
 	ouputEvenIndices(numbers, NUMBER_OF_INTEGERS);
-	outputEven(numbers, 10);
+	outputEven(numbers, NUMBER_OF_INTEGERS);
+	reverseOrder(numbers, NUMBER_OF_INTEGERS);
 
 	return 0;
 }
 
+void reverseOrder(int array[], int size) {
+	cout << "\nReversed order:\t\t";
+
+	for (int i = size - 1; i >= 0; i--) {
+		cout << array[i] << '\t';
+	}
+}
+
+
 void ouputEvenIndices(int array[], int size) {
-	cout << "\nEven indices:\t";
+	cout << "\nEven indices:\t\t";
 
 	for (int i = 0; i < size; i++) {
 		if (i % 2) {
@@ -47,7 +59,7 @@ void ouputEvenIndices(int array[], int size) {
 }
 
 void outputEven(int array[], int size) {
-	cout << "\nEven values:\t";
+	cout << "\nEven values:\t\t";
 	for (int i = 0; i < size; i++) {
 		if (array[i] % 2) {
 			continue;
