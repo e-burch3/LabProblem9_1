@@ -11,6 +11,8 @@
 using namespace std;
 
 void outputEven(int array[], int size);
+void ouputEvenIndices(int array[], int size);
+
 
 int main(void) {
 	const int HIGHEST_VALUE = 9999;
@@ -25,14 +27,27 @@ int main(void) {
 		numbers[i] = rand() % (HIGHEST_VALUE - LOWEST_VALUE + 1) + LOWEST_VALUE; // get random 4 digit number
 		cout << numbers[i] << '\t';
 	}
-
+	ouputEvenIndices(numbers, NUMBER_OF_INTEGERS);
 	outputEven(numbers, 10);
 
 	return 0;
 }
 
-void outputEven(int array[], int size) {
+void ouputEvenIndices(int array[], int size) {
 	cout << "\nEven indices:\t";
+
+	for (int i = 0; i < size; i++) {
+		if (i % 2) {
+			continue;
+		}
+		else {
+			cout << array[i] << '\t';
+		}
+	}
+}
+
+void outputEven(int array[], int size) {
+	cout << "\nEven values:\t";
 	for (int i = 0; i < size; i++) {
 		if (array[i] % 2) {
 			continue;
