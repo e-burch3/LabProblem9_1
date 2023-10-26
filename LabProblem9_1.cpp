@@ -10,7 +10,7 @@
 #include <ctime>
 using namespace std;
 
-
+void outputEven(int array[], int size);
 
 int main(void) {
 	const int HIGHEST_VALUE = 9999;
@@ -26,7 +26,19 @@ int main(void) {
 		cout << numbers[i] << '\t';
 	}
 
-	
+	outputEven(numbers, 10);
 
 	return 0;
+}
+
+void outputEven(int array[], int size) {
+	cout << "\nEven indices:\t";
+	for (int i = 0; i < size; i++) {
+		if (array[i] % 2) {
+			continue;
+		}
+		else {
+			cout << array[i] << '\t';
+		}
+	}
 }
